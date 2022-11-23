@@ -70,7 +70,7 @@ form {
   justify-content: center;
 }
 
-.search-box form input {
+#search {
   background-image: url("search.png");
   color: #00ad7c;
   font-size: 1rem;
