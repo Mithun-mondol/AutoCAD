@@ -1,0 +1,697 @@
+/* General Style */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Titillium+Web:wght@900&display=swap");
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Titillium Web', sans-serif; */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  background: #91c788;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*.............. 1.0 Header Section ............*/
+
+#header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+}
+
+/*............. 1.1 Top-Header ..................*/
+.top-header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*............... 1.1.1 Brand ....................*/
+.brand {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2.5rem;
+  flex: 50%;
+  padding: 15px 0;
+}
+
+.brand a {
+  color: #00ad7c;
+  text-decoration: none;
+}
+
+/* ................1.1.2 Search-Box .............*/
+.search-box {
+  align-items: center;
+  background: linear-gradient(
+    rgba(11, 250, 182, 0.9),
+    rgba(13, 209, 176, 0.87)
+  );
+  display: flex;
+  flex: 50%;
+  min-width: 500px;
+  padding: 15px 0;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.search-box form input {
+  background-image: url(/images/search.png);
+  color: #00ad7c;
+  font-size: 1rem;
+  background-position: right 1.5% bottom 50%;
+  background-repeat: no-repeat;
+  border: 1px solid #00ad7c;
+  border-radius: 5px;
+  height: 40px;
+  margin-right: 15px;
+  outline: none;
+  padding: 0 37px 0 15px;
+  width: 50%;
+}
+
+.search-box form input:focus {
+  box-shadow: 0 0 1px 2px #00ad7c;
+}
+
+.search-box form button {
+  background-color: #00ad7c;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.35rem;
+  height: 40px;
+  width: 20%;
+}
+
+.search-box form button:hover {
+  background-color: rgba(0, 121, 101, 0.678);
+}
+
+/* ...............1.2 Navbar Section ...............*/
+
+div.nav {
+  background-color: #009879;
+  /* display: flex;
+  padding: 0px 25px; */
+  position: relative;
+  margin-top: 20px;
+}
+
+/* .......... 1.2.1 Main Navbar Link Style .......... */
+div.nav div#modal {
+  background-color: #009879;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  /* padding: 0px 25px;
+  margin-top: 20px; */
+}
+
+div.nav div#modal a {
+  /* color: #007965; */
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 20px 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  width: 180px;
+}
+
+div.nav div#modal a:hover,
+div.nav div#modal a.active {
+  /* font-size: 1.5rem; */
+  background: #007965;
+  font-weight: bold;
+}
+
+a:active {
+  background: #007965;
+}
+
+div.nav div#modal a i {
+  padding-right: 10px;
+}
+
+/* ................ 1.2.2 Dropdown Link Style ............. */
+
+div.dropdown-menu {
+  position: relative;
+  /* padding: 25px 0px; */
+  text-align: center;
+  width: 180px;
+}
+
+div.dropdown-menu:hover,
+div#modal ul.tutor-sub-menu li:nth-child(1):hover,
+div#modal ul.tutor-sub-menu li:nth-child(2):hover,
+div#modal ul.tutor-sub-menu li:nth-child(3):hover {
+  background: #007965;
+}
+
+div.dropdown-menu:hover ul.tutor-sub-menu {
+  display: flex;
+}
+
+div#modal div.dropdown-menu a.main-nav {
+  width: 100%;
+  display: block;
+}
+
+ul.tutor-sub-menu {
+  background-color: #009879;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  padding: 0px;
+  position: absolute;
+  margin: 0px;
+  width: 180px;
+  z-index: 1;
+}
+
+div#modal ul.tutor-sub-menu li:nth-child(1):hover div.autocad-sub-menu {
+  display: flex;
+}
+
+div#modal ul.tutor-sub-menu li:nth-child(2):hover div.max-sub-menu {
+  display: flex;
+}
+
+div#modal ul.tutor-sub-menu li:nth-child(3):hover div.civil-3d-sub-menu {
+  display: flex;
+}
+
+div#modal ul.tutor-sub-menu li a {
+  display: block;
+  padding: 8px 0 8px 43px;
+  width: 100%;
+  text-align: left;
+}
+
+div#modal ul div.autocad-sub-menu a,
+div#modal ul div.max-sub-menu a,
+div#modal ul div.civil-3d-sub-menu a {
+  padding: 8px 0 8px 25px;
+  text-align: left;
+  width: 100%;
+}
+
+/* 1.2.2.1 AutoCAD Sub-menu Style */
+.autocad-sub-menu {
+  background-color: #009879;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0px;
+  left: 180px;
+  width: 251px;
+}
+
+/* 1.2.2.2 3D Max Sub-menu Style */
+
+.max-sub-menu {
+  background-color: #009879;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 47px;
+  left: 180px;
+  width: 251px;
+}
+
+/* 1.2.2.3 Civil 3D Sub-menu Style */
+
+.civil-3d-sub-menu {
+  background-color: #009879;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 93px;
+  left: 180px;
+  width: 251px;
+}
+
+/* ........... 1.2.3 Open and Close Button Style .......... */
+.open {
+  background-color: #009879;
+  color: rgb(255, 255, 255);
+  border: none;
+  /* border: 2px solid #009879; */
+  display: none;
+  font-weight: bold;
+  font-size: 2.56rem;
+  padding: 17.5px 0px;
+  cursor: pointer;
+  width: 95px;
+}
+
+/* #openBtn i {
+  padding: 0px 15px;
+  size: 15px;
+} */
+
+.close {
+  color: #008c71;
+  background: rgb(255, 114, 114);
+  border: none;
+  /* border: 2px solid #009879; */
+  display: none;
+  font-weight: bold;
+  font-size: 2.56rem;
+  padding: 17.5px 0px;
+  cursor: pointer;
+  width: 95px;
+}
+/* .................... MOdal Style ..................... */
+/* 
+div#modal {
+  background-color: #009879;
+  border-right: 2px solid #008c71;
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 0;
+  left: -275px;
+  opacity: 0;
+  width: 275px;
+  transition: left 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+div#modal div.modalNav {
+  display: flex;
+  flex-direction: column;
+}
+
+div#modal button#closeBtn {
+  font-size: 2.5rem;
+  position: absolute;
+  padding: 5px;
+  top: 0;
+  right: 0;
+  border: #009879;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #52734d;
+}
+
+div#modal button#closeBtn i {
+  width: 52px;
+}
+
+div#modal button#closeBtn:hover {
+  color: #008c71;
+  background: rgb(255, 114, 114);
+}
+
+div#modal div.modalNav a {
+  text-align: left;
+  margin-left: 25px;
+}
+
+div#modal div.modalNav a:nth-child(1) {
+  margin-top: 25px;
+}
+
+div#modal div.modalNav a:last-child {
+  margin-bottom: 25px;
+} */
+
+/* ................ Introduction Section ........... */
+
+div#introduction {
+  /* background-color: #b5ff7d;
+  background-color: rgb(82, 214, 129); */
+  background-color: #fff;
+  padding: 25px 60px;
+  border: 2px solid #00ad7c;
+  border-radius: 25px;
+  box-shadow: 0 0 15px 0px #00ad7c;
+}
+
+div#introduction h1 {
+  color: #007965;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+div#introduction p {
+  color: #007965;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+/* ............. Side-Bar Section ........... */
+
+div#sideBar {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 35px 0;
+}
+
+div#sideBar i {
+  color: #007965;
+}
+
+/* ..............1.0 Left Side-Bar ............ */
+
+div#sideBar .leftWarp {
+  flex: 50%;
+  padding-right: 15px;
+}
+
+div#sideBar .leftSideBar {
+  border: 2px solid #00ad7c;
+  border-radius: 25px;
+  box-shadow: 0 0 15px 0px #00ad7c;
+  width: 100%;
+  height: 100%;
+}
+
+div#sideBar .leftSideBar h1 {
+  color: #52734d;
+  font-weight: 500;
+  position: relative;
+  margin-left: 20px;
+  padding-left: 50px;
+}
+
+div#sideBar .leftSideBar h1 i {
+  position: absolute;
+  left: 0px;
+  top: 0;
+}
+
+div#sideBar .leftSideBar ul li {
+  color: #52734d;
+  list-style: none;
+  font-size: 1.5rem;
+  padding: 15px 5px 15px 70px;
+  position: relative;
+}
+
+.icon-left {
+  font-size: 2.5rem;
+  position: absolute;
+  left: 20px;
+  top: 12px;
+}
+
+/* ..............2.0 Right Side-Bar ............ */
+
+div#sideBar .rightWarp {
+  flex: 50%;
+  padding-left: 15px;
+}
+
+div#sideBar .rightSideBar {
+  border: 2px solid #00ad7c;
+  border-radius: 25px;
+  box-shadow: 0 0 15px 0px #00ad7c;
+  width: 100%;
+  height: 100%;
+}
+
+div#sideBar .rightSideBar h1 {
+  color: #52734d;
+  font-weight: 500;
+  position: relative;
+  margin-left: 20px;
+  padding-left: 50px;
+}
+
+div#sideBar .rightSideBar h1 i {
+  position: absolute;
+  left: 0px;
+  top: 10px;
+}
+
+div#sideBar .rightSideBar ul li {
+  color: #52734d;
+  font-size: 1.5rem;
+  list-style: none;
+  padding: 15px 5px 15px 70px;
+  position: relative;
+  /* text-indent: 15px; */
+}
+
+.icon-right {
+  font-size: 2.5rem;
+  position: absolute;
+  left: 20px;
+}
+
+/*.......... Footer Section........... */
+
+#footer {
+  background-color: rgb(145, 199, 136);
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding: 15px 25px;
+}
+
+/* 1. Link section Style */
+#footer div.link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer div.link a {
+  color: rgb(0, 121, 101);
+  text-decoration: none;
+  padding: 20px 25px;
+  transition: 0.3s;
+}
+
+#footer div.link a:hover {
+  color: #007965;
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  border-bottom: 5px dotted rgb(0, 121, 101);
+  width: 10%;
+}
+
+/* 2. Copyright Section Style */
+#footer div.copyRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer div.copyRight h3 {
+  color: rgb(0, 121, 101);
+  margin-bottom: 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+#footer div.copyRight p {
+  font-size: 0.8rem;
+  margin-top: 0;
+  color: rgb(0, 121, 101);
+  text-align: center;
+}
+
+/*............... Media Query .................*/
+
+/* ...................... 1. Brand Link Logo ............... */
+@media screen and (max-width: 1111px) {
+  .brand a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+/* ...................... 2. Search Box ..................... */
+@media screen and (max-width: 600px) {
+  .search-box {
+    flex-wrap: wrap;
+    min-width: fit-content;
+  }
+  .search-box form input {
+    width: 70%;
+    margin: 0 10px;
+  }
+  .search-box form button {
+    width: 30%;
+    margin-right: 10px;
+  }
+}
+
+/* ....................... 3. Navigation Bar ..................  */
+@media screen and (max-width: 1020px) {
+  div.nav {
+    display: flex;
+    padding: 0 25px;
+    justify-content: flex-end;
+  }
+
+  div.nav div#modal {
+    /* display: none; */
+    background-color: #009879;
+    border-right: 2px solid #008c71;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    height: 59vh;
+    top: 0px;
+    left: -327px;
+    /* opacity: 0; */
+    width: 275px;
+    transition: left 0.5s ease, display 5s ease-in-out, opacity 5s ease-in-out;
+    z-index: 1;
+  }
+
+  div.nav div#modal a {
+    /* color: #007965; */
+    color: #fff;
+    font-size: 1.45rem;
+    padding: 25px 45px;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    width: 100%;
+  }
+
+  /* Dropdown link media query */
+  div.dropdown-menu {
+    width: 275px;
+  }
+
+  ul.tutor-sub-menu {
+    top: 0;
+    left: 275px;
+    width: 200px;
+  }
+
+  .autocad-sub-menu {
+    top: 0px;
+    left: 200px;
+    width: 300px;
+  }
+
+  .max-sub-menu {
+    top: 50px;
+    left: 200px;
+    width: 300px;
+  }
+
+  .civil-3d-sub-menu {
+    top: 100px;
+    left: 200px;
+    width: 300px;
+  }
+
+  /* button */
+  #openBtn {
+    display: block;
+  }
+}
+/* ....................... 5. Side Bar Section ..................  */
+@media screen and (max-width: 950px) {
+  div#sideBar {
+    flex-direction: column;
+  }
+
+  /* 5.1 Left Side Bar Section */
+  div#sideBar .leftWarp {
+    padding-bottom: 18px;
+    padding-right: 0px;
+  }
+
+  /* 5.2 Right Side Bar Section */
+  div#sideBar .rightWarp {
+    padding-top: 18px;
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  div#introduction h1 {
+    text-align: center;
+  }
+
+  /* 5.1 Left Side Bar Section */
+  div#sideBar .leftSideBar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div#sideBar .leftSideBar h1 {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 25px;
+    text-align: center;
+  }
+
+  div#sideBar .leftSideBar h1 i {
+    position: inherit;
+    padding-right: 15px;
+  }
+
+  div#sideBar .leftSideBar ul li {
+    padding: 15px 5px 15px 45px;
+  }
+
+  .icon-left {
+    left: -10px;
+  }
+
+  /* 5.2 Right Side Bar Section */
+  div#sideBar .rightSideBar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div#sideBar .rightSideBar h1 {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 25px;
+    text-align: center;
+  }
+
+  div#sideBar .rightSideBar h1 i {
+    position: inherit;
+    padding-right: 15px;
+  }
+
+  div#sideBar .rightSideBar ul li {
+    padding: 15px 5px 15px 45px;
+  }
+
+  .icon-right {
+    left: -10px;
+  }
+}
