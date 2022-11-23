@@ -71,7 +71,7 @@ form {
 }
 
 .search-box form input {
-  background-image: url(search.png);
+  background-image: url("search.png");
   color: #00ad7c;
   font-size: 1rem;
   background-position: right 1.5% bottom 50%;
